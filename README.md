@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Game of Shells
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
+
+Game of Shells is an interactive, web-based game inspired by the classic shell game. Players must keep track of the shell that contains the ball as the shells are shuffled. This project is built using React and TypeScript.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn install`  
+install packages that are required to run the project.
 
+### `yarn start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Features
 
-### `npm test`
+- Dynamic difficulty levels (Easy, Medium, Hard) that change the speed and complexity of the game.
+- Modular and reusable component structure.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm run build`
+### Preview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![gameofshells](https://github.com/eliftabak/game-of-shells/assets/58824027/83d863b8-ce06-4e60-8227-6d581b3fda78)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Usage
+- Start the game by clicking the 'Shuffle' button.
+- Watch the shells as they are shuffled and try to keep track of the shell with the ball.
+- Click on a shell to make a guess.
+- Play again or change the difficulty level as desired.
