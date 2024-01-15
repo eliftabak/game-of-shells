@@ -1,0 +1,23 @@
+.difficultySelector {
+  text-align: left;
+
+  span {
+    font-size: 14px;
+    color: #d9b99b;
+  }
+}
+
+.difficultyLevelContainer {
+  border-radius: 0.3rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.difficultyLevel {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #fff;
+}
+.difficultyLevel.active {
+  text-decoration: underline;
+}
