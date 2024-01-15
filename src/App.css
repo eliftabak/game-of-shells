@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'StonePunk';
+  src: url('../public/assets/fonts/StonePunk.ttf') format('truetype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #e0f7fa; /* Soft blue */
+  font-family: 'Arial', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.shellGame {
+  width: 100%;
+  height: 100%;
   display: flex;
+  position: relative;
+  text-align: center;
+  margin: auto;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 150px;
+
+  h1 {
+    color: #d9b99b;
+    font-family: 'StonePunk', serif; 
+    margin: 30px auto;
+    font-size: 4rem;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.shellsContainer {
+  width: 800px;
+  height: 500px;
+  border: 2px solid #d9b99b;
+  border-radius: 2%;
+  position: relative;
+  margin: auto;
+  background-image: url('../public/assets/images/beach.webp');
 }
 
-@keyframes App-logo-spin {
+.buttonContainer {
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+   
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  button:hover {
+    background-color: #45a049; 
+  }
+
+  button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+}
+
+.gameControlPanel {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 20px;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.shell {
+  width: 200px;
+  height: 180px;
+  cursor: pointer;
+  position: absolute;
+  transition: transform .5s ease-in-out;
+}
+
+@keyframes openShell {
   from {
-    transform: rotate(0deg);
+    margin-top: 0px;
   }
   to {
-    transform: rotate(360deg);
+    margin-top: -30px;
   }
+}
+
+@keyframes closeShell {
+  from {
+    margin-top: -30px;
+  }
+  to {
+    margin-top: 0px; 
+  }
+}
+
+.shell.hasBall.opening {
+  animation: openShell 0.5s forwards;
+}
+
+.shell.hasBall.closing {
+  overflow: hidden;
+  animation: closeShell 0.5s forwards;
+}
+
+.shell.shuffling {
+  overflow: hidden;
 }
